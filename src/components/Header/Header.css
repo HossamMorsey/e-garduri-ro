@@ -1,0 +1,14 @@
+/* import satisfy font for header */
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+/* Image header design */
+.header-title-img {
+  width: 220px;
+  height: auto;
+}
+/* paragraph design inside header */
+.header-p {
+  font-family: "Satisfy", cursive;
+  font-size: 22px;
+  color: #0e7b42;
+}

@@ -1,0 +1,261 @@
+/* Global Style for resetting some default styles */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Fonts that's used  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+/* main background color for the body of the page */
+body {
+  background: #fff;
+}
+
+/* Main style for tabs and their content */
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 98%;
+  height: 100%;
+  background: #f1f1f1;
+  margin: 30px auto 0;
+  word-break: break-all;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+/* display flex for tabs headers */
+.bloc-tabs {
+  display: flex;
+}
+/* design for each tab */
+.tabs {
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+.tabs:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+/*  design when selecting a tab */
+.active-tabs {
+  background: white;
+  border-bottom: 1px solid transparent;
+}
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+  background: #d01000;
+}
+
+button {
+  border: none;
+}
+/* design of content for each tab */
+.content-tabs {
+  flex-grow: 1;
+}
+.content {
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+  font-family: Abel;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.content p {
+  width: 100%;
+  height: 100%;
+}
+.active-content {
+  display: block;
+}
+
+/*  continue button design */
+.continue-button {
+  cursor: pointer;
+  width: 15%;
+  height: 50px;
+  background-color: #6c9974;
+  color: white;
+  display: inline;
+  font-weight: 900;
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+  margin: 20px;
+}
+/*  back button design */
+.back-button {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  background-color: #6c9974;
+  color: white;
+  display: inline;
+  font-weight: bold;
+  margin: 20px;
+  position: absolute;
+  bottom: -140px;
+  left: 10px;
+}
+
+/* design for fences container */
+.fences-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+/* Design for vertical bars container */
+.vertical-bar-container {
+  width: 30%;
+  height: 500px;
+  position: relative;
+}
+/* Design for vertical bar */
+.v-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c4c4c4;
+  border: 1px solid #222;
+}
+/* Design for bar tag */
+.bar-tag {
+  border: 1px solid #222;
+  position: absolute;
+  width: 131%;
+  height: 20px;
+  background-color: #c4c4c4;
+  left: -17%;
+  top: 0;
+}
+/* Design for horizontal bar */
+.horizontal-bar {
+  display: flex;
+  height: 120px;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  background-color: #c4c4c4;
+  width: 100%;
+}
+
+/* panel container */
+.panel-container {
+  width: 100%;
+}
+/* gate Display Flex */
+.gate {
+  display: flex;
+}
+/* right border to draw gate */
+.right-border {
+  border-right: 1px solid #333;
+}
+/* Gate Splitter */
+.vertical-bar-gate-splitter {
+  width: 10px;
+  height: 100%;
+  border-left: 1px solid #333;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+/* fence container design  */
+.fence {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/* Horizontal fence design */
+.horizontal-fence {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/* design of fence panel  */
+.panel {
+  background: #333;
+  display: flex;
+  height: 20px;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+/* color section container */
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  color: #222;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 20px;
+  width: 98%;
+}
+/* Color container   */
+.color-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* color circles main design */
+.color {
+  content: "";
+  cursor: pointer;
+  border: 1px solid rgba(179, 179, 179, 0.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 10px;
+}
+/* Colors for color circles */
+.black {
+  background-color: #333;
+}
+.green {
+  background-color: #6c9974;
+}
+.brown {
+  background-color: #80532c;
+}
+.night-blue {
+  background-color: #233a53;
+}
+.grey {
+  background-color: #757575;
+}
+.robin {
+  background-color: #00cec9;
+}
